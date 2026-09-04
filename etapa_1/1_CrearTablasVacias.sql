@@ -1,4 +1,4 @@
--- Paso 1. Crear todas las tablas vacías en la base de datos
+-- Paso 1. Crear toda
 
 create table team
 (
@@ -256,6 +256,12 @@ create table player_season_stats
 
     foreign key (team_id)
         references team (team_id)
+);
+
+create table game_history (
+    game_id bigint primary key,
+    season int,
+    game_date date
 );
 
 alter table player add foreign key ("team_id") references team ("team_id");
